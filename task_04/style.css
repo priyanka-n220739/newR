@@ -1,0 +1,96 @@
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background:palegoldenrod;
+        }
+        input[type="date"]{
+            width:25%;
+            padding:5px;
+            font-size:16px;
+         }
+        .navbar {
+            background: black;
+            color:white;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar img {
+            border-radius: 50%;
+        }
+        .navbar-right a {
+            color:white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .navbar-right a:hover {
+            color:wheat;
+        }
+        .home {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 40px;
+            background:wheat;
+        }
+        .home-left {
+            width: 50%;
+        }
+        .home-left h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            color:chocolate;
+        }
+        .home-left p {
+            line-height: 1.6;
+            font-size: 18px;
+            color:orangered
+        }
+        .home-right img {
+            border-radius: 20px;
+        }
+        .services {
+            background:wheat;
+            padding: 40px;
+            margin-top: 20px;
+        }
+        table {
+            width: 30%;
+            border-collapse: collapse;
+            margin: auto;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .services h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .service-box {
+            background:burlywood;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px plum;
+        }
+        .service-box h2 {
+            margin: 0;
+            color:chocolate;
+        }
+        .service-box p {
+            color: olive;
+        }
+        .login-box{
+            text-align: center;
+            align-items: center;
+            background-color: burlywood;
+            padding: 15px;
+            border: 2px solid black;
+            margin:50px auto"
+        }
+    
