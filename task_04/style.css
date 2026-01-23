@@ -4,38 +4,10 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background:black;
+            padding :0;
+            margin:0;
         }
-        .dynamic-text {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    color: #FFD700; /* gold */
-    font-family: 'Ubuntu', sans-serif;
-    margin-top: 100px;
-    perspective: 1000px;
-    text-shadow: 0 0 10px #fff;
-}
-
-/* Fade animation */
-@keyframes fade {
-    0% { opacity: 0; transform: translateY(20px); }
-    10% { opacity: 1; transform: translateY(0px); }
-    90% { opacity: 1; transform: translateY(0px); }
-    100% { opacity: 0; transform: translateY(-20px); }
-}
-
-#rotating-text {
-    display: inline-block;
-    font-size: 36px;
-    font-weight: 700;
-    color: #FFD700;
-    font-family: 'Ubuntu', sans-serif;
-    text-shadow: 0 0 10px #fff;
-
-    /* Initial animation */
-    transform-origin: center;
-    transition: transform 1s ease-in-out;
-}
+        
 
         /* background */
          /*  RANDOM FLOATING STAR BACKGROUND */
@@ -84,6 +56,36 @@
     from{ background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
     to  { background-position: 200px -200px, -120px 260px, 260px 120px, -240px -180px, 180px 200px, -300px 140px; }
 }
+.dynamic-text {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    color:gold ;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top:0;
+    padding-top:0;
+    text-shadow: 0 0 10px #fff;
+} 
+
+/* Fade animation */
+@keyframes fade {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0px); }
+    90% { opacity: 1; transform: translateY(0px); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+#rotating-text {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 700;
+    color: #FFD700;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 0 0 10px #fff;
+
+    animation: spin 3s linear infinite;
+    transform-origin: center;
+} 
 
 
         input[type="date"]{
@@ -92,7 +94,8 @@
             font-size:16px;
          }
         .navbar {
-            background: black;
+           /* background: black;*/
+            margin-bottom:0 ;
             color:white;
             padding: 15px 40px;
             display: flex;
@@ -114,8 +117,9 @@
         .home {
             display: flex;
             justify-content: space-between;
-            padding: 60px 40px;
-            background:black;
+            padding:20px 40px;
+            margin-top:0;
+           /* background:black;*/
         }
         .home-left {
             width: 50%;
