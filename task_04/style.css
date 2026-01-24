@@ -3,7 +3,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background:black;
+            background:lavender;
             padding :0;
             margin:0;
         }
@@ -18,12 +18,12 @@
     pointer-events: none;
 
     background-image:
-      radial-gradient(4px 4px at 10% 20%, gold, transparent),
+      radial-gradient(4px 4px at 10% 20%, olive, transparent),
       radial-gradient(5px 5px at 40% 70%, gold, transparent),
-      radial-gradient(3px 3px at 80% 30%, gold, transparent),
-      radial-gradient(6px 6px at 60% 10%, gold, transparent),
-      radial-gradient(4px 4px at 20% 90%, gold, transparent),
-      radial-gradient(5px 5px at 90% 60%, gold, transparent);
+      radial-gradient(3px 3px at 80% 30%, white, transparent),
+      radial-gradient(6px 6px at 60% 10%, pink, transparent),
+      radial-gradient(4px 4px at 20% 90%, wheat, transparent),
+      radial-gradient(5px 5px at 90% 60%, chocolate, transparent);
 
     background-size:
       120px 120px,
@@ -38,7 +38,7 @@
       drift2 3s linear infinite,
       drift3 2s linear infinite;
     
-    filter: drop-shadow(0 0 10px gold);
+    filter: drop-shadow(0 0 10px wheat);
 }
 
 /*  DIFFERENT RANDOM MOTIONS */
@@ -56,64 +56,117 @@
     from{ background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
     to  { background-position: 200px -200px, -120px 260px, 260px 120px, -240px -180px, 180px 200px, -300px 140px; }
 }
-.dynamic-text {
-    text-align: center;
-    font-size: 50px;
-    font-weight: 700;
-    color:gold ;
-    font-family: 'Ubuntu', sans-serif;
-    margin-top:0;
-    padding-top:0;
-    text-shadow: 0 0 10px #fff;
-} 
-
-/* Fade animation */
-@keyframes fade {
-    0% { opacity: 0; transform: translateY(20px); }
-    10% { opacity: 1; transform: translateY(0px); }
-    90% { opacity: 1; transform: translateY(0px); }
-    100% { opacity: 0; transform: translateY(-20px); }
+.navbar {
+    background-color:black;
+    padding: 6px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+.nav-left {
+  width: 33%;
 }
 
-#rotating-text {
-    display: inline-block;
-    font-size: 50px;
-    font-weight: 700;
-    color: #FFD700;
-    font-family: 'Ubuntu', sans-serif;
-    text-shadow: 0 0 10px #fff;
+/* CENTER — MAGIC HERE */
+ .nav-center {
+  font-size: 50px;
+  font-weight: 700;
+  color:lavender;
+  font-family: 'Ubuntu', sans-serif;
+  text-shadow: 0 0 10px skyblue;
 
-    animation: spin 3s linear infinite;
-    transform-origin: center;
+  animation: rotateText 4s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 } 
+/* navbar-right is the FLEX CONTAINER */
+.navbar-right {
+    display: flex;
+    gap:30px;
+}
 
+/* links simple gaa undaali */
+.navbar-right a {
+    color:whitesmoke;
+    text-shadow:black;
+    text-decoration: none;
+    font-size:20px;
+}
 
-        input[type="date"]{
-            width:25%;
-            padding:5px;
-            font-size:16px;
-         }
-        .navbar {
-           /* background: black;*/
-            margin-bottom:0 ;
-            color:white;
-            padding: 15px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .navbar img {
-            border-radius: 50%;
-        }
-        .navbar-right a {
-            color:white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 18px;
-        }
-        .navbar-right a:hover {
-            color:wheat;
-        }
+.navbar-right a:hover {
+    color:darkturquoise;
+}
+ /* Parent container */
+.search-box {
+    display: flex;
+    flex-direction: column; /* heading + fields vertical arrange */
+    align-items: center;    /* center horizontally */
+    justify-content: center; /* optional vertical center if needed */
+    margin-top: 10px;       /* gap from top */
+}
+
+/* Heading */
+.search-box h1{
+    color: black;           /* white text */
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;     /* center text */
+}
+
+/* Fields container */
+.search-fields {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center; /* center horizontally */
+}
+
+/* Inputs */
+.search-fields input {
+    padding: 8px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-fields input[type="date"] {
+    width: 160px;
+}
+
+.search-fields input[type="text"] {
+    width: 200px;
+}
+
+/* Button */
+.search-fields button {
+    padding: 9px 18px;
+    background:skyblue;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-fields button:hover {
+    background: darkgoldenrod;
+}
+
+   
+  
+        
         .home {
             display: flex;
             justify-content: space-between;
@@ -127,12 +180,12 @@
         .home-left h1 {
             font-size: 45px;
             margin-bottom: 20px;
-            color:chocolate;
+            color:black;
         }
         .home-left p {
             line-height: 1.6;
-            font-size: 18px;
-            color:whitesmoke;
+            font-size: 25px;
+            color:black;
         }
         .home-right img {
             border-radius: 20px;
@@ -179,4 +232,3 @@
             border: 2px solid black;
             margin:50px auto"
         }
-    
