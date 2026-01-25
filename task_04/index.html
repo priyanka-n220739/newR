@@ -4,12 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventPro</title>
-     <script>
-    // window open ayyaka immediate redirect
-    window.onload = function() {
-      window.location.href = "login.html"; // login page path
-    };
-  </script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -45,7 +39,7 @@
  
     <div class="home">
         <div class="home-left">
-            <h1>Create <b style="color:black">Unforgettable</b> Celebrations</h1>
+            <h1>Create <span class="unforgettable"><b style="color:black">Unforgettable</b> </span> Celebrations</h1>
             <p>
                    From intimate birthdays to grand events,we bring your vision
                    to life .Connect with trusted local vendors and plan details 
@@ -58,98 +52,42 @@
          <img src="https://cdn.prod.website-files.com/67a1309347b6ef581cb8c16c/67bec643dc445bc91fc97fba_ai-image-2051d582-8431-4087-af19-e16b1b2f3d6a.jpeg" height="300" width="500" altr="image">
         </div>
     </div>
-    
+    <section id="services">
+        <h1 class="section-title">Our Services</h1>
+
+        <div class="services-container">
+
+            <!-- Events -->
+            <div class="service-card" onclick="location.href='events.html'">
+                <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce" alt="Events">
+                <h2>Events</h2>
+                <div class="overlay">
+                    <h2>Events</h2>
+                </div>
+            </div>
+
+            <!-- MOVIES -->
+            <div class="service-card" onclick="location.href='movies.html'">
+                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba" alt="Movies">
+                <div class="overlay">
+                    <h2>Movies</h2>
+                </div>
+            </div>
+
+            <!-- FOOD -->
+            <div class="service-card" onclick="location.href='food.html'">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1" alt="Food & Catering">
+                <div class="overlay">
+                    <h2>Food & Catering</h2>
+                </div>
+            </div>
+
+        </div>
+    </section>
        
     
      
-    <div class="services">
-        <h1>Services Offered</h1>
-
-        <div class="service-box">
-            <div class="service-box-left">
-            <h2> Event Photography</h2>
-            <p><b><h5>Photos are the capturing moments</h5></b> 
-                <i><ol>
-                    <li>Birthday</li>
-                    <li>Marriage</li>
-                    <li>House Warming Ceremony</li>
-                </ol></i></p>
-            </div>
-            <div class="service-box-right">
-                <img src="https://tinyurl.com/4ujsnn3t">
-            </div>
-        </div>
-
-        <div class="service-box">
-            <h2>Food</h2>
-            <p><h5>For living in others thoughts first is the main source</h5>
-            <i>
-                <ol>
-                    <li>Veg</li>
-                    <li>Non-veg</li>
-                    <li>NOTE:ALL ITEMS BASED ON YOUR REQUORMENTS.</li>
-                </ol>
-            </i></p>
-            <center> MENU CARD</center>
-            <table>
-                     
-                    <tr>
-                        <th>veg_items</th>
-                        <th>cost_per_plate</th>
-
-                    </tr>
-                    <tr>
-                        <td>veg_biriyani</td>
-                        <td>100/-</td>
-                    </tr>
-                    <tr>
-                        <td>sewwts_5types</td>
-                        <td>25/-</td>
-                    </tr>
-                    <tr>
-                        <td>panneer_curry</td>
-                        <td>50</td>
-                    </tr>
-                    <tr>
-                        <td>ice_cream</td>
-                        <td>25/-</td>
-                    </tr>
-                    
-            
-            </table>
-
-        </div>
-       <div class="service-box">
-            <h2>Mhanddi Designs</h2>
-            <p><i>
-                <ol>
-                    <li>Veg</li>
-                    <li>Non-veg</li>
-                    <li>NOTE:ALL ITEMS BASED ON YOUR REQUORMENTS.</li>
-                </ol>
-            </i></p>
-        </div>
-        <div class="service-box">
-            <h2>Saree Draping</h2>
-            <p><i>
-                <ol>
-                    <li>Veg</li>
-                    <li>Non-veg</li>
-                    <li>NOTE:ALL ITEMS BASED ON YOUR REQUORMENTS.</li>
-                </ol>
-            </i></p>
-        </div>
-        <div class="service-box">
-            <h2>Event Logos creation</h2>
-            <p><i>
-                <ol>
-                    <li>Veg</li>
-                    <li>Non-veg</li>
-                    <li>NOTE:ALL ITEMS BASED ON YOUR REQUORMENTS.</li>
-                </ol>
-            </i></p>
-        </div>
-    </div>
+     
  
 </body>
 </html>
