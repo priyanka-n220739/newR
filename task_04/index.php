@@ -1,3 +1,9 @@
+<?php
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +25,18 @@
              </div>
 
           <div class="navbar-right">
-            <a href="login.html">Login</a>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-         </div>
+    <a href="index.php">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+
+    <?php if (!isset($_SESSION['username'])) { ?>
+        <a href="login.php">Login</a>
+    <?php } else { ?>
+        <a href="logout.php">Logout</a>
+    <?php } ?>
+</div>
+
     </nav>
     <div class="stars"> </div>
  <video id="video-background"></video>
