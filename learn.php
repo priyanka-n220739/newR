@@ -8,9 +8,34 @@
    $email="priya@1234";//string
    $age=20;//integer
    $cgpa=9.6;//float
+   $islogin="true";//boolean
    //boolean=true or false
    echo " Hello {$name}<br>";
    echo " your <br> age:{$age} <br>mail:{$email}<br> and cgpa:{$cgpa} <br>";
+   var_dump($islogin);
+   echo "<br>";
+   //variable scope : scope means where a variable can be accessed
+   //01_variable declared inside a function
+   function localvariabletest(){
+    $msg="local variable";
+    echo $msg ."<br>";
+   }
+   localvariabletest();
+   //02_global scoped variable declared outside the function
+   $glo="global variable";
+   function globalvar(){
+      global $glo;
+      echo "$glo"."<br>";
+   }
+   globalvar();
+   //03_static scoped variable remembers its value even after function call
+   function adder(){
+    static $sum=0;
+    $sum++;
+    echo "incrementing values $sum"."<br>";
+   }
+   adder();
+   adder();
    //Arthematic operators:+,-,*,/,**,%
    $x=10;
    $y=3;
@@ -40,14 +65,35 @@
     echo "condition fails"."<br>";
    }
    //string functions
-   $name="paiya";
-   $name=strtolower($name);
-   $name=strtoupper($name);
-   $name=trim($name);
-   $name=str_pad($name,8,"a");
-   $name=strrev($name);
-   $name=str_replace("-","",$name);
-   $name=strtolower($name);
+   $name="priya";
+   //case conversion
+   echo strtolower($name) ."<br>";
+   echo strtoupper($name) ."<br>";
+   echo ucfirst($name) ."<br>";//output:Priya
+   echo ucwords("hello priya") ."<br>";//output:Hello Priya
+   //basic functions
+   echo str_word_count($name) ."<br>";
+   echo str_pad($name,8,"a") ."<br>";
+   echo strrev($name) ."<br>";
+   echo strlen($name) ."<br>";
+   //search and replace
+   echo str_replace("php","html","i love php") ."<br>";
+   echo strpos("hello $name",$name) ."<br>";
+   //substrings and triming
+   echo substr($name,0,1) ."<br>";
+   echo ltrim("  priya") ."<br>";
+   echo trim(" priya ") ."<br>";
+   echo rtrim("priya ") ."<br>";
+   //string comparision
+   echo strcmp("priya","Priya") ."<br>";//case-sensitive
+   echo strcasecmp("priya","Priya") ."<br>";//case insensitive
+   //htmlspecialchars()
+   echo htmlspecialchars("<script> alert(1)</script>")."<br>";
+   echo addslashes("i'am priyanka")."<br>";
+   //array
+   $skills=["HTML","css","JAVASCRIPT"];
+   print_r($skills);
+   echo "<br>";
 
    //conditional statements
    //if
@@ -69,7 +115,7 @@
     elseif($marks>=70)
        echo  "you are second";
     else
-        echo "nuvvu neenu okateee";
+        echo "nuvvu neenu okateelee";
     //loops
     //1 forloop
     for($i=1;$i<10;$i++){
@@ -109,6 +155,15 @@
         echo "q is largest ".($q)."<br>";
     else
         echo "r is largest".($r);
+    //print first 10 natural numbers
+    $n=10;
+    for($i=1;$i<=$n;$i++){
+        echo "number:$i"."<br>";
+    }
+    //output functions
+    echo "hello"."<br>";//fast multiple values
+    print "hi"."<br>";//returns 1
+   // die("error occured");//stops execution after this
 
 
    /* 4_GET ,$_POST=special variables used to collect data from an html form data is sent to the file  
