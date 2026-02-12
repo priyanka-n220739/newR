@@ -108,6 +108,7 @@
    else{
     echo "condition fails"."<br>";
    }
+
    //if-elseif-else
    $marks=65;
    if($marks>=80)
