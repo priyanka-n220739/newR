@@ -1,5 +1,16 @@
 <?php
 session_start();
+$env = parse_ini_file('.env');
+
+$client_id = $env['CLIENT_ID'];
+$redirect_uri = $env['REDIRECT_URI'];
+
+$auth_url = "https://accounts.google.com/o/oauth2/v2/auth?" .
+    "client_id=" . $client_id .
+    "&redirect_uri=" . urlencode($redirect_uri) .
+    "&response_type=code" .
+    "&scope=email profile" .
+    "&access_type=offline";
 ?>
 
 
@@ -29,12 +40,13 @@ session_start();
     <a href="#">About</a>
     <a href="#">Services</a>
     <a href="#">Contact</a>
-
-    <?php if (!isset($_SESSION['username'])) { ?>
-        <a href="login.php">Login</a>
+     <?php if (!isset($_SESSION['username'])) { ?>
+    <a href="<?php echo $auth_url; ?>">Login with Google</a>
     <?php } else { ?>
-        <a href="logout.php">Logout</a>
+    <a href="logout.php">Logout</a>
     <?php } ?>
+
+     
 </div>
 
     </nav>
