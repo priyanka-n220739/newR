@@ -1,25 +1,8 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Startup Demo Website</title>
-  <style>
-    body { font-family: Arial; margin: 20px; }
-    .box { padding: 10px; border: 1px solid black; }
-  </style>
-</head>
-<body><h1>My Startup Website 🚀</h1><!-- Task 4 --><p id="text">Welcome to our startup!</p>
-<button onclick="changeText()">Change Text</button><!-- Task 5 --><div id="box" class="box">Style Me</div>
-<button onclick="toggleStyle()">Toggle Style</button><!-- Task 7 --><h3>Contact Form</h3>
-<form onsubmit="return validateForm()">
-  Name: <input type="text" id="name"><br><br>
-  Email: <input type="text" id="email"><br><br>
-  <button type="submit">Submit</button>
-</form><br>
-<button onclick="printPage()">Print Page</button><script>
 // ================= TASK 1 =================
 var company = "MyStartup";
 let founder = "Priya";
 const year = 2026;
+
 console.log(company, founder, year);
 
 // ================= TASK 2 =================
@@ -29,43 +12,50 @@ function add(a, b) {
 
 const subtract = (a, b) => a - b;
 
-console.log("Addition:", add(5, 3));
-console.log("Subtraction:", subtract(5, 3));
+console.log("Addition:", add(10, 5));
+console.log("Subtraction:", subtract(10, 5));
 
 // ================= TASK 3 =================
 alert("Welcome to My Startup Website!");
+
 let userName = prompt("Enter your name:");
 console.log("User Name:", userName);
 
 // ================= TASK 4 =================
 function changeText() {
-  document.getElementById("text").innerHTML = "You clicked the button!";
+  document.getElementById("text").innerHTML =
+    "You clicked the button!";
 }
 
 // ================= TASK 5 =================
 let toggle = false;
+
 function toggleStyle() {
   let box = document.getElementById("box");
+
   if (!toggle) {
     box.style.backgroundColor = "yellow";
-    box.style.fontSize = "20px";
     box.style.color = "red";
+    box.style.fontSize = "20px";
   } else {
     box.style.backgroundColor = "white";
-    box.style.fontSize = "16px";
     box.style.color = "black";
+    box.style.fontSize = "16px";
   }
+
   toggle = !toggle;
 }
 
 // ================= TASK 6 =================
-document.getElementById("box").onmouseover = function() {
-  this.style.backgroundColor = "lightblue";
-}
+let box = document.getElementById("box");
 
-document.getElementById("box").onmouseout = function() {
-  this.style.backgroundColor = "white";
-}
+box.onmouseover = function () {
+  box.style.backgroundColor = "lightblue";
+};
+
+box.onmouseout = function () {
+  box.style.backgroundColor = "white";
+};
 
 // ================= TASK 7 =================
 function validateForm() {
@@ -85,5 +75,3 @@ function validateForm() {
 function printPage() {
   window.print();
 }
-</script></body>
-</html>
