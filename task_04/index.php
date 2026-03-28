@@ -40,8 +40,8 @@ $auth_url = "https://accounts.google.com/o/oauth2/v2/auth?" .
     <a href="#">About</a>
     <a href="#">Services</a>
     <a href="#">Contact</a>
-     <?php if (!isset($_SESSION['username'])) { ?>
-    <a href="<?php echo $auth_url; ?>">Login with Google</a>
+     <?php  if (!isset($_SESSION['username'])) { ?>
+     <a href="<?php echo $auth_url; ?>">Login with Google</a>
     <?php } else { ?>
     <a href="logout.php">Logout</a>
     <?php } ?>
