@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Startup Website</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+ <!DOCTYPE html>
 
-<h1>🚀 My Startup Website</h1>
+<!-- Greeting -->
+<h2 id="greet"></h2>
 
 <!-- Task 4 -->
 <p id="text">Welcome to our startup!</p>
 <button onclick="changeText()">Change Text</button>
+<button onclick="addContent()">Add Content</button>
+<button onclick="removeContent()">Remove Content</button>
 
 <!-- Task 5 -->
 <div id="box" class="box">Style Me</div>
 <button onclick="toggleStyle()">Toggle Style</button>
+
+<!-- Task 6 -->
+<div id="hoverBox" class="box">Hover over me</div>
 
 <!-- Task 7 -->
 <h3>Contact Form</h3>
@@ -26,8 +25,9 @@
 </form>
 
 <br>
-<button onclick="printPage()">🖨️ Print Page</button>
+<button onclick="printPage()">Print Page</button>
 
 <script src="script.js"></script>
 </body>
 </html>
+

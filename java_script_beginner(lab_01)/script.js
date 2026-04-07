@@ -1,11 +1,10 @@
-// ================= TASK 1 =================
+ // TASK 1: Variables
 var company = "MyStartup";
 let founder = "Priya";
 const year = 2026;
-
 console.log(company, founder, year);
 
-// ================= TASK 2 =================
+// TASK 2: Functions
 function add(a, b) {
   return a + b;
 }
@@ -15,24 +14,34 @@ const subtract = (a, b) => a - b;
 console.log("Addition:", add(10, 5));
 console.log("Subtraction:", subtract(10, 5));
 
-// ================= TASK 3 =================
-alert("Welcome to My Startup Website!");
+// TASK 3: Built-in functions
+alert("Welcome to Startup Website!");
+let user = prompt("Enter your name:");
+document.getElementById("greet").innerHTML = "Hello " + user;
+console.log("User:", user);
 
-let userName = prompt("Enter your name:");
-console.log("User Name:", userName);
-
-// ================= TASK 4 =================
+// TASK 4: DOM manipulation
 function changeText() {
-  document.getElementById("text").innerHTML =
-    "You clicked the button!";
+  document.getElementById("text").innerHTML = "Text Changed!";
 }
 
-// ================= TASK 5 =================
-let toggle = false;
+function addContent() {
+  let p = document.createElement("p");
+  p.innerText = "New Content Added";
+  document.body.appendChild(p);
+}
 
+function removeContent() {
+  let elements = document.querySelectorAll("p");
+  if (elements.length > 1) {
+    elements[elements.length - 1].remove();
+  }
+}
+
+// TASK 5: Styling
+let toggle = false;
 function toggleStyle() {
   let box = document.getElementById("box");
-
   if (!toggle) {
     box.style.backgroundColor = "yellow";
     box.style.color = "red";
@@ -42,28 +51,25 @@ function toggleStyle() {
     box.style.color = "black";
     box.style.fontSize = "16px";
   }
-
   toggle = !toggle;
 }
 
-// ================= TASK 6 =================
-let box = document.getElementById("box");
+// TASK 6: Events
+let hoverBox = document.getElementById("hoverBox");
+hoverBox.onmouseover = function() {
+  hoverBox.style.backgroundColor = "lightblue";
+}
+hoverBox.onmouseout = function() {
+  hoverBox.style.backgroundColor = "white";
+}
 
-box.onmouseover = function () {
-  box.style.backgroundColor = "lightblue";
-};
-
-box.onmouseout = function () {
-  box.style.backgroundColor = "white";
-};
-
-// ================= TASK 7 =================
+// TASK 7: Form validation
 function validateForm() {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
 
   if (name === "" || email === "") {
-    alert("All fields are required!");
+    alert("All fields required!");
     return false;
   }
 
@@ -71,7 +77,7 @@ function validateForm() {
   return true;
 }
 
-// Print Function
+// Print
 function printPage() {
   window.print();
 }

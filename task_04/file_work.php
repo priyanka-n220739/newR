@@ -1,4 +1,4 @@
-<?php
+  <?php
  $file =__DIR__."/uploads/uploaded.txt";
  echo "<br>";
  //File Info
